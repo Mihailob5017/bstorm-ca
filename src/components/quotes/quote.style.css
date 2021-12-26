@@ -1,0 +1,17 @@
+.quote-wrapper {
+	margin: 1.5px 0px;
+	background-color: #f8f8f8;
+}
+.quote-text {
+	display: block;
+	font-size: 20px;
+	font-family: 'Helvetica Neue';
+	padding: 4px 15px;
+}
+.quote-author {
+	display: block;
+	width: 90%;
+	text-align: right;
+	font-weight: lighter;
+	font-size: 16px;
+}

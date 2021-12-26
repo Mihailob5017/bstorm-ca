@@ -3,11 +3,7 @@ import './pages.style.css';
 
 // Code
 const TodoPage = () => {
-	return (
-		<div>
-			<h1>Todos</h1>
-		</div>
-	);
+	return <div></div>;
 };
 
 export default TodoPage;
