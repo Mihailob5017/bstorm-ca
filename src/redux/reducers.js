@@ -19,7 +19,7 @@ const initialState = {
 	deleteId: '',
 };
 
-// Helper functions used for filtering
+// Helper functions
 const replaceData = (todos = [], newTodo) => {
 	return [...todos.filter((todo) => todo.id !== newTodo.id), newTodo];
 };
@@ -36,7 +36,11 @@ const reducer = (state = initialState, action) => {
 		case GET_MOTIVATIONAL_QUOTES:
 			return { ...state, quotes: [...action.payload] };
 		case SET_VISABLE_MODAL:
-			return { ...state, modalSelected: action.payload };
+			return {
+				...state,
+				modalSelected: action.payload,
+				singleTodo: initialState.singleTodo,
+			};
 		case ADD_TODO:
 			return {
 				...state,

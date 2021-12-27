@@ -57,6 +57,7 @@ export const deleteCompete = () => ({
 	type: DELETE_TODO_COMPLETE,
 });
 
+// Get values into a singleTodo object so we can display it in the popup
 export const getSingleTodo = (todo) => ({
 	type: GET_SINGLE_TODO,
 	payload: todo,

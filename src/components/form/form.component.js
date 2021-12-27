@@ -28,10 +28,12 @@ const FormComponent = ({ newId, isBeingEdited = false }) => {
 	const validate = Yup.object({
 		title: Yup.string()
 			.min(3, 'Enter between 3 and 15 characters')
-			.max(15, 'Enter between 3 and 15 characters'),
+			.max(15, 'Enter between 3 and 15 characters')
+			.required('This field is required'),
 		body: Yup.string()
 			.min(5, 'Enter between 5 and 20 characters')
-			.max(20, 'Enter between 5 and 20 characters'),
+			.max(20, 'Enter between 5 and 20 characters')
+			.required('This field is required'),
 	});
 
 	return (

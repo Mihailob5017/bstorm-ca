@@ -8,6 +8,7 @@ import moment from 'moment';
 import { useDispatch } from 'react-redux';
 import { editTodoStart, deleteStart, getSingleTodo } from '../../redux/actions';
 
+// Code
 const TodoComponent = ({ id, body, title, date, num }) => {
 	const dispatch = useDispatch();
 	const handleEdit = () => {
@@ -32,7 +33,7 @@ const TodoComponent = ({ id, body, title, date, num }) => {
 		<div onClick={handleView} className='single-todo'>
 			<h1 className='single-todo-num'>{num}</h1>
 			<h1 className='single-todo-title'>{title}</h1>
-			<h1 className='single-todo-date'>{moment(date).format('YYYY-MM-DD')}</h1>
+			<h1 className='single-todo-date'>{moment(date).format('DD.MM.YYYY')}</h1>
 			<div className='single-todo-group'>
 				<button onClick={handleEdit} className='btn btn-edit'>
 					Edit

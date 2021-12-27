@@ -1,6 +1,7 @@
 import React from 'react';
 import './search.style.css';
 
+// Code
 const SearchComponent = ({ value, searchHandler }) => {
 	return (
 		<div className='search-component'>
