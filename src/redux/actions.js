@@ -5,6 +5,8 @@ import {
 	ADD_TODO,
 	EDIT_TODO_START,
 	EDIT_TODO_COMPLETE,
+	DELETE_TODO_START,
+	DELETE_TODO_COMPLETE,
 } from './types';
 
 // Switch page we are one [ todo -> quotes ] and [ quotes -> todo ]
@@ -37,8 +39,19 @@ export const editTodoStart = (todo) => ({
 	payload: todo,
 });
 
-// Replace data
+// Replace todos
 export const editTodoComplete = (todo) => ({
 	type: EDIT_TODO_COMPLETE,
 	payload: todo,
+});
+
+// Open the "are you sure you want to delete modal"
+export const deleteStart = (id) => ({
+	type: DELETE_TODO_START,
+	payload: id,
+});
+
+// Delete todos
+export const deleteCompete = () => ({
+	type: DELETE_TODO_COMPLETE,
 });

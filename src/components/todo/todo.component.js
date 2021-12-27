@@ -6,7 +6,7 @@ import moment from 'moment';
 
 // Redux
 import { useDispatch } from 'react-redux';
-import { editTodoStart } from '../../redux/actions';
+import { editTodoStart, deleteStart } from '../../redux/actions';
 
 const TodoComponent = ({ id, body, title, date, num }) => {
 	const dispatch = useDispatch();
@@ -19,6 +19,10 @@ const TodoComponent = ({ id, body, title, date, num }) => {
 		};
 		dispatch(editTodoStart(values));
 	};
+	const handleDelete = () => {
+		dispatch(deleteStart(id));
+	};
+
 	return (
 		<div className='single-todo'>
 			<h1 className='single-todo-num'>{num}</h1>
@@ -28,7 +32,9 @@ const TodoComponent = ({ id, body, title, date, num }) => {
 				<button onClick={handleEdit} className='btn btn-edit'>
 					Edit
 				</button>
-				<button className='btn btn-delete'>Delete</button>
+				<button onClick={handleDelete} className='btn btn-delete'>
+					Delete
+				</button>
 			</div>
 		</div>
 	);

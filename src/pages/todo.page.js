@@ -6,6 +6,7 @@ import Todo from '../components/todo/todo.component';
 import Search from '../components/search/search.component';
 import Modal from '../components/modals/modal.component';
 import FormComponent from '../components/form/form.component';
+import DeleteComponent from '../components/delete/delete.component';
 
 // Redux
 import { useSelector, useDispatch } from 'react-redux';
@@ -69,6 +70,14 @@ const TodoPage = () => {
 			{modalSelected === 'edit' ? (
 				<Modal>
 					<FormComponent isBeingEdited={true} />
+				</Modal>
+			) : (
+				<></>
+			)}
+
+			{modalSelected === 'delete' ? (
+				<Modal>
+					<DeleteComponent />
 				</Modal>
 			) : (
 				<></>

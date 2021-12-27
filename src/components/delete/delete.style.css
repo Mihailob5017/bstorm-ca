@@ -1,0 +1,13 @@
+.delete-header {
+	font-weight: normal;
+	color: #9b0000;
+	text-align: center;
+}
+
+.delete-btngroup {
+	margin-top: 50px;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
