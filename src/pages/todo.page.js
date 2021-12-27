@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './pages.style.css';
 
 // Components
@@ -19,8 +19,13 @@ const TodoPage = () => {
 	const dispatch = useDispatch();
 
 	// State
-	const [todos, setTodos] = useState(initialTodos);
+	const [todos, setTodos] = useState([]);
 	const [searchValue, setSearchValue] = useState('');
+
+	// Had to add useEffect so that it notices once redux state changes
+	useEffect(() => {
+		setTodos(initialTodos);
+	}, [initialTodos]);
 
 	const searchHandler = (value) => {
 		setSearchValue(value);

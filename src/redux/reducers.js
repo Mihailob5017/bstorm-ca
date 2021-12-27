@@ -31,7 +31,7 @@ const initialState = {
 	quotes: [],
 	singleTodo: { title: '', body: '', date: '' },
 	isTodoSelected: true,
-	modalSelected: 'add',
+	modalSelected: '',
 };
 
 const reducer = (state = initialState, action) => {
