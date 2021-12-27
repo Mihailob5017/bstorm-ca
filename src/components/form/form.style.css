@@ -1,0 +1,37 @@
+.form-header {
+	font-weight: normal;
+	color: #1a6645;
+	text-align: center;
+}
+.form-btngroup {
+	margin-top: 50px;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.form-btn {
+	margin: 0 10px;
+	padding: 2.5px 15px;
+	font-size: 16px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.btn-submit {
+	color: #1a6645;
+	border: 1px solid #1a6645;
+	background: #50e3a4;
+}
+.btn-submit:hover {
+	transition: 300ms;
+	background: #45bd8a;
+}
+.btn-secondary {
+	background: #999;
+	border: 1px solid #444;
+	color: #444;
+}
+.btn-secondary:hover {
+	background: #888;
+	transition: 300ms;
+}
