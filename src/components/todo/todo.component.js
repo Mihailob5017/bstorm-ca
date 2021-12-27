@@ -6,7 +6,7 @@ import moment from 'moment';
 
 // Redux
 import { useDispatch } from 'react-redux';
-import { editTodoStart, deleteStart } from '../../redux/actions';
+import { editTodoStart, deleteStart, getSingleTodo } from '../../redux/actions';
 
 const TodoComponent = ({ id, body, title, date, num }) => {
 	const dispatch = useDispatch();
@@ -23,12 +23,17 @@ const TodoComponent = ({ id, body, title, date, num }) => {
 		dispatch(deleteStart(id));
 	};
 
+	const handleView = (e) => {
+		if (!e.target.className.includes('btn'))
+			dispatch(getSingleTodo({ id, title, body, date }));
+	};
+
 	return (
-		<div className='single-todo'>
+		<div onClick={handleView} className='single-todo'>
 			<h1 className='single-todo-num'>{num}</h1>
 			<h1 className='single-todo-title'>{title}</h1>
 			<h1 className='single-todo-date'>{moment(date).format('YYYY-MM-DD')}</h1>
-			<div className='single-todo-btngroup'>
+			<div className='single-todo-group'>
 				<button onClick={handleEdit} className='btn btn-edit'>
 					Edit
 				</button>

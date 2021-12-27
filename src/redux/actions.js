@@ -7,6 +7,7 @@ import {
 	EDIT_TODO_COMPLETE,
 	DELETE_TODO_START,
 	DELETE_TODO_COMPLETE,
+	GET_SINGLE_TODO,
 } from './types';
 
 // Switch page we are one [ todo -> quotes ] and [ quotes -> todo ]
@@ -54,4 +55,9 @@ export const deleteStart = (id) => ({
 // Delete todos
 export const deleteCompete = () => ({
 	type: DELETE_TODO_COMPLETE,
+});
+
+export const getSingleTodo = (todo) => ({
+	type: GET_SINGLE_TODO,
+	payload: todo,
 });

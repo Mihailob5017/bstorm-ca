@@ -1,0 +1,16 @@
+.single-todo-field {
+	border-bottom: 1px solid #aaa;
+	padding: 5px 10px;
+}
+.single-todo-label {
+	margin-right: 5px;
+	color: #444;
+	font-weight: bolder;
+}
+.close-modal {
+	display: block;
+	margin: 10px auto;
+	padding: 5px 15px;
+	border-radius: 3px;
+	cursor: pointer;
+}

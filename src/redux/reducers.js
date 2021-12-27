@@ -7,6 +7,7 @@ import {
 	EDIT_TODO_COMPLETE,
 	DELETE_TODO_START,
 	DELETE_TODO_COMPLETE,
+	GET_SINGLE_TODO,
 } from './types';
 
 const initialState = {
@@ -61,6 +62,8 @@ const reducer = (state = initialState, action) => {
 				todos: filterData(state.todos, state.deleteId),
 				deleteId: '',
 			};
+		case GET_SINGLE_TODO:
+			return { ...state, singleTodo: action.payload, modalSelected: 'view' };
 
 		default:
 			return state;

@@ -7,6 +7,7 @@ import Search from '../components/search/search.component';
 import Modal from '../components/modals/modal.component';
 import FormComponent from '../components/form/form.component';
 import DeleteComponent from '../components/delete/delete.component';
+import ViewComponent from '../components/single-todo/single-todo.component';
 
 // Redux
 import { useSelector, useDispatch } from 'react-redux';
@@ -78,6 +79,13 @@ const TodoPage = () => {
 			{modalSelected === 'delete' ? (
 				<Modal>
 					<DeleteComponent />
+				</Modal>
+			) : (
+				<></>
+			)}
+			{modalSelected === 'view' ? (
+				<Modal>
+					<ViewComponent />
 				</Modal>
 			) : (
 				<></>
