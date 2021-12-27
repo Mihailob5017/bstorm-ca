@@ -61,7 +61,14 @@ const TodoPage = () => {
 			</button>
 			{modalSelected === 'add' ? (
 				<Modal>
-					<FormComponent />
+					<FormComponent newId={initialTodos.length} />
+				</Modal>
+			) : (
+				<></>
+			)}
+			{modalSelected === 'edit' ? (
+				<Modal>
+					<FormComponent isBeingEdited={true} />
 				</Modal>
 			) : (
 				<></>

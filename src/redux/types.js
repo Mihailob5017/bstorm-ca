@@ -1,6 +1,8 @@
 export const ADD_TODO = 'ADD_TODO';
 
-export const EDIT_TODO = 'EDIT_TODO';
+export const EDIT_TODO_START = 'EDIT_TODO_START';
+
+export const EDIT_TODO_COMPLETE = 'EDIT_TODO_COMPLETE';
 
 export const DELETE_TODO = 'DELETE_TODO';
 

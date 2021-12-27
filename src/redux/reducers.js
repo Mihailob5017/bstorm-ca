@@ -3,35 +3,19 @@ import {
 	GET_MOTIVATIONAL_QUOTES,
 	SET_VISABLE_MODAL,
 	ADD_TODO,
+	EDIT_TODO_START,
+	EDIT_TODO_COMPLETE,
 } from './types';
 
 const initialState = {
-	todos: [
-		{
-			title: 'Host a meeting',
-			body: 'Host a meeting with directors of other firms',
-			date: '',
-		},
-		{
-			title: 'Clean House',
-			body: 'Its bout time you clean the house',
-			date: '',
-		},
-		{
-			title: 'Pay Taxes',
-			body: 'Your rent is coming due this week.Do something about it ',
-			date: '',
-		},
-		{
-			title: 'Get Wife Gift',
-			body: 'Valentines day is near. Dont forget to get her the gift,twice',
-			date: '',
-		},
-	],
+	todos: [],
 	quotes: [],
-	singleTodo: { title: '', body: '', date: '' },
+	singleTodo: { id: '', title: '', body: '', date: '' },
 	isTodoSelected: true,
 	modalSelected: '',
+};
+const replaceData = (todos = [], newTodo) => {
+	return [...todos.filter((todo) => todo.id !== newTodo.id), newTodo];
 };
 
 const reducer = (state = initialState, action) => {
@@ -46,6 +30,15 @@ const reducer = (state = initialState, action) => {
 			return {
 				...state,
 				todos: [...state.todos, action.payload],
+				modalSelected: '',
+			};
+		case EDIT_TODO_START:
+			return { ...state, singleTodo: action.payload, modalSelected: 'edit' };
+		case EDIT_TODO_COMPLETE:
+			return {
+				...state,
+				singleTodo: initialState.singleTodo,
+				todos: replaceData(state.todos, action.payload),
 				modalSelected: '',
 			};
 		default:

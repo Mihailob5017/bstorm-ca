@@ -35,3 +35,14 @@
 	background: #888;
 	transition: 300ms;
 }
+
+.btn-edit {
+	background: #ffe200;
+	color: #686729;
+	border: 1px solid #686729;
+}
+.btn-edit:hover {
+	cursor: pointer;
+	background: #dbc300;
+	transition: 300ms;
+}
