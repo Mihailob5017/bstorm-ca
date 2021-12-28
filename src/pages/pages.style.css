@@ -3,7 +3,7 @@
 }
 
 .todo-container {
-	min-height: 250px;
+	min-height: 400px;
 	border-top: 1px solid #aaa;
 	margin-top: 50px;
 }
@@ -61,4 +61,28 @@
 	cursor: pointer;
 	transition: 300ms;
 	background: #45bd8a;
+}
+@media screen and (max-width: 700px) {
+	.todo-num {
+		width: 7%;
+		font-size: 14px;
+		padding-left: 2px;
+	}
+	.todo-title {
+		font-size: 14px;
+	}
+	.todo-date {
+		font-size: 14px;
+	}
+	.add-todo {
+		width: 25%;
+	}
+}
+@media screen and (max-width: 450px) {
+	.todos-header {
+		display: none;
+	}
+	.add-todo {
+		width: 45%;
+	}
 }

@@ -65,3 +65,53 @@
 	cursor: pointer;
 	transition: 300ms;
 }
+@media screen and (max-width: 700px) {
+	.single-todo-title,
+	.single-todo-date,
+	.single-todo-num {
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 450px) {
+	.single-todo {
+		margin: 10px auto;
+		width: 99%;
+		height: 70px;
+		border: 1px solid #aaa;
+		border-radius: 3px;
+		box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+			rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: repeat(2, 30px);
+		gap: 10px;
+	}
+	.single-todo-num {
+		grid-column-start: 1;
+		grid-column-end: 2;
+		grid-row-start: 1;
+		grid-row-end: 2;
+	}
+	.single-todo-title {
+		grid-column-start: 2;
+		grid-column-end: 4;
+		grid-row-start: 1;
+		grid-row-end: 2;
+	}
+	.single-tod-body {
+		grid-column-start: 4;
+		grid-column-end: 6;
+		grid-row-start: 1;
+		grid-row-end: 2;
+	}
+	.single-todo-group {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		grid-column-start: 1;
+		grid-column-end: 6;
+		grid-row-start: 2;
+		grid-row-end: 3;
+	}
+}

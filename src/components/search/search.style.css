@@ -26,3 +26,27 @@
 	margin-right: 5px;
 	border-radius: 0px 3px 3px 0px;
 }
+
+@media screen and (max-width: 700px) {
+	.search-component {
+		margin: 0;
+		height: fit-content;
+	}
+	.search-label {
+		margin: 0;
+		border: 1px solid #aaa;
+		border-radius: 0;
+	}
+	.search-input {
+		border-radius: 0;
+		margin: 0;
+		border-right: 1px solid #aaa;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.search-label,
+	.search-input {
+		font-size: 14px;
+	}
+}

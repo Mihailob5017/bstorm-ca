@@ -38,3 +38,10 @@
 	color: #9b0000;
 	font-size: 12px;
 }
+
+@media screen and (max-width: 700px) {
+	.input-label,
+	.input-field {
+		font-size: 14px;
+	}
+}
